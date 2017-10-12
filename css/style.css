@@ -1,0 +1,26 @@
+.bg {
+  background-color: #EEE;
+  padding: 20px;
+}
+
+.main-box {
+  margin: 20px;
+  box-shadow: 5px 5px 7px #CCC;
+  background-color: #FFF;
+}
+
+.header-title {
+  background: linear-gradient(135deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color: #FFF;
+  padding-top: 20px;
+}
+
+.footer {
+  background-color: #22334e;
+  color: #FFF;
+  text-align: center;
+}
+
+a:hover {
+  cursor: pointer;
+}

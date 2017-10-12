@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registro Estudiantes</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  </head>
+
+  <body>
+    <div class="bg">
+      <div class="main-box">
+        <div class="header-title">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                  <h3>Listado de estudiantes</h3>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="container">
+          <div class="row">
+
+            <div class="row">
+              <div class="col s12">
+                <table id="studentTable" class="striped">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Código</th>
+                      <th>Nota</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12">
+                <ul class="collapsible popout" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header">
+                      <i class="material-icons">assignment</i>
+                      <span id="title">Haga click en una opción para mostrar</span>
+                    </div>
+                    <div class="collapsible-body">
+                      <span id="content">Contenido</span>
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col s12">
+                <a id="modalTrigger" class="waves-effect waves-light btn modal-trigger">Nuevo</a>
+                <a id="average" class="waves-effect waves-light btn blue darken-1">Promedio</a>
+                <a id="highest" class="waves-effect waves-light btn cyan">Nota Mayor</a>
+                <a id="lowest" class="waves-effect waves-light btn light-blue">Nota Menor</a>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="regModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Registro de Estudiantes</h4>
+        <p>Ingrese los datos del estudiante</p>
+        <div class="row">
+          <div class="col s12" style="color: #b71c1c; text-align: center;"><p id="error"></p></div>
+        </div>
+        <div class="row">
+          <form id="registerForm" class="col s12">
+            <div class="row">
+              <div class="col s12">
+                <div class="input-field">
+                  <input id="name" type="text" class="validate">
+                  <label for="name">Nombre</label>
+                </div>
+
+                <div class="input-field">
+                  <input id="code" type="text" class="validate">
+                  <label for="code">Código</label>
+                </div>
+
+                <div class="input-field">
+                  <input id="score" type="number" class="validate">
+                  <label for="score">Nota</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="modalClose" class="waves-effect waves-green btn-flat">Guardar</a>
+        <a class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+      </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+      <div class="modal-content red lighten-3" style="color: white;">
+        <h4>Precaución</h4>
+        <p>
+          Está seguro de que desea elminiar definitivamente los datos del estudiante
+          <span id="deleteName"></span>
+        </p>
+      </div>
+      <div class="modal-footer red lighten-4">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <a id="deleteOk" class="waves-effect waves-green btn-flat"><b>Eliminar</b></a>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+  <footer class="page-footer" style="background-color: #37474f">
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <h5 class="grey-text text-lighten-1">Proyecto Final jQuery</h5>
+          <p class="grey-text text-lighten-2">Luis Eduardo Romero Paredes</p>
+          <a href="https://nextu.com"><img src="src/nextutransparent.png" alt="NextU" class="responsive-img" style="max-height: 25px"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright" style="background-color: #263238">
+      <div class="container">
+        <div class="row" style="margin-bottom: 0px">
+          <div class="col s6 valign-wrapper">
+            <a style="margin: 5px auto;" href="http://materializecss.com" target="_blank"><img src="src/materialize-logo2.png" alt="Materialize" style="max-height: 30px;"></a>
+          </div>
+          <div class="col s6 valign-wrapper">
+            <a style="margin: 5px auto;" href="https://jquery.com" target="_blank"><img src="src/jquery-logo.png" alt="jQuery" style="max-height: 30px;"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</html>
